@@ -1,0 +1,22 @@
+<html>
+    <h1>
+        the results are shown below
+    </h1>
+    <body>
+    <table>
+               
+        {%  for kye,value in results.items()   %}
+        <tr>
+        <th>
+            {{key}}
+        </th>
+        <tr>
+            {{value}}
+        </tr>
+        {# This is a comment, here we don't get indentation so we will end the for loop like this #}
+        {%  endfor  %}
+    </tr>
+
+    </table>
+    </body>
+</html>

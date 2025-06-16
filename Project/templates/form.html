@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Risk Input Form</title>
+    <style>
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100px;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Fire Risk Input Form</h2>
+    <form method="POST">
+        <table>
+            <tr>
+                <th>Temperature</th>
+                <th>RH</th>
+                <th>Ws</th>
+                <th>Rain</th>
+                <th>FFMC</th>
+                <th>DMC</th>
+                <th>ISI</th>
+                <th>Classes</th>
+                <th>Region</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="Temperature" required></td>
+                <td><input type="text" name="RH" required></td>
+                <td><input type="text" name="Ws" required></td>
+                <td><input type="text" name="Rain" required></td>
+                <td><input type="text" name="FFMC" required></td>
+                <td><input type="text" name="DMC" required></td>
+                <td><input type="text" name="ISI" required></td>
+                <td><input type="text" name="Classes" required></td>
+                <td><input type="text" name="Region" required></td>
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        Result: {{ result }}
+    </div>
+    {% endif %}
+</body>
+</html>
